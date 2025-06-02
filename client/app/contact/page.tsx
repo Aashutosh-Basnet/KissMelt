@@ -88,7 +88,7 @@ const ContactPage = () => {
             GET IN TOUCH
           </h1>
           <p className='text-lg sm:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed'>
-            We'd love to hear from you! Visit our locations, give us a call, or send us an email.
+            We&#39;d love to hear from you! Visit our locations, give us a call, or send us an email.
           </p>
         </div>
 

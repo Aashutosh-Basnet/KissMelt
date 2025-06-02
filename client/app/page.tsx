@@ -25,7 +25,7 @@ export default function Home() {
         </div>
         <div className={`w-full lg:w-1/2 flex md:items-center md:justify-center p-4 lg:p-10 text-3xl md:text-4xl lg:text-5xl text-center lg:text-left ${playfair.className}`}>
           <p className="w-full lg:w-[75%]">
-            SWEETENING LIFE'S MOMENTS,
+            SWEETENING LIFE&#39;S MOMENTS,
             <br className="hidden lg:block"/> 
             ONE CHOCOLATE DIPPED TREAT 
             <br className="hidden lg:block"/> 
