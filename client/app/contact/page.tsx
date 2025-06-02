@@ -4,6 +4,7 @@ import { IoCall } from "react-icons/io5";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaClock } from "react-icons/fa6";   
 import Invite from '../components/Invite';
+import PageWrapper from '../components/PageWrapper';
 
 import { Playfair_Display, Manrope } from 'next/font/google'
 
@@ -79,12 +80,12 @@ const ContactPage = () => {
   ];
 
   return (
-    <div className={`overflow-x-hidden ${manrope.className}`}>
+    <PageWrapper className={`overflow-x-hidden ${manrope.className}`}>
       <div className='w-full bg-gradient-to-br from-pink-300 via-pink-200 to-red-100 text-black px-4 sm:px-6 lg:px-10 py-8 sm:py-12 lg:py-16'>
         
         {/* Header Section */}
         <div className='text-center mb-8 sm:mb-12 lg:mb-16'>
-          <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-red-600 mb-4 ${playfair.className}`}>
+          <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[rgb(255,0,0)] mb-4 ${playfair.className}`}>
             GET IN TOUCH
           </h1>
           <p className='text-lg sm:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed'>
@@ -107,7 +108,7 @@ const ContactPage = () => {
                     <div className='bg-red-50 p-4 sm:p-6 rounded-full group-hover:bg-red-100 transition-colors duration-300'>
                       <IconComponent 
                         size={60}
-                        className='text-red-600 sm:w-16 sm:h-16 lg:w-20 lg:h-20' 
+                        className='text-[rgb(255,0,0)] sm:w-16 sm:h-16 lg:w-20 lg:h-20' 
                       />
                     </div>
                   </div>
@@ -121,7 +122,7 @@ const ContactPage = () => {
                   <div className='space-y-4 sm:space-y-6'>
                     {item.content.map((info, idx) => (
                       <div key={idx} className='text-center'>
-                        <h4 className='text-base sm:text-lg lg:text-xl font-semibold text-red-600 mb-2'>
+                        <h4 className='text-base sm:text-lg lg:text-xl font-semibold text-[rgb(255,0,0)] mb-2'>
                           {info.label}
                         </h4>
                         {info.subtitle && (
@@ -141,11 +142,11 @@ const ContactPage = () => {
           </div>
         </div>
 
-        
+         
       </div>
       
       <Invite/>
-    </div>
+    </PageWrapper>
   )
 }
 

@@ -12,14 +12,14 @@ const playfair = Playfair_Display({
 export default function Home() {
   return (
     <div className="overflow-x-hidden w-screen mx-auto">
-      <div className="min-h-[50vh] md:min-h-[90vh] flex flex-col lg:flex-row bg-[#E7000B]">
+      <div className="min-h-[50vh] md:min-h-[90vh] flex flex-col lg:flex-row bg-[#ff000d]">
         <div className="w-full lg:w-1/2 flex items-center justify-center p-4 lg:p-10">
           <Image 
             src="/images/home.png" 
             alt="home_img" 
             height={3665} 
             width={2449}
-            className="w-full max-w-[80%] lg:max-w-full h-auto object-contain"
+            className="w-full max-w-[80%] lg:max-w-full h-auto object-contain rounded-3xl"
             priority
           />
         </div>

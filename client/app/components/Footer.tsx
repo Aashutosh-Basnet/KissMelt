@@ -10,7 +10,7 @@ const Footer = () => {
   const menuItems = ["HOME", "ORDER ONLINE", "CUSTOM ORDERS", "ABOUT", "CONTACT US", "POLICIES", "CAREERS"];
 
   return (
-    <footer className={`bg-red-600 text-white ${manrope.className} overflow-x-hidden p-5`}>
+    <footer className={`bg-[rgb(255,0,0)] text-white ${manrope.className} overflow-x-hidden p-5`}>
       <div className="mx-auto">
         <div className="flex flex-wrap md:flex-row justify-between py-8 md:py-8">
           <div className="w-full md:w-auto mb-8 md:mb-0">

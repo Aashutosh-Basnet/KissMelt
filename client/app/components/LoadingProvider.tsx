@@ -1,6 +1,6 @@
 "use client"
 
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext, useEffect } from 'react';
 import LoadingScreen from './ui/LoadingScreen';
 import useLoading from '../hooks/useLoading';
 
@@ -29,10 +29,33 @@ interface LoadingProviderProps {
 const LoadingProvider: React.FC<LoadingProviderProps> = ({ children }) => {
   const loadingState = useLoading();
 
+  useEffect(() => {
+    // Additional check for document ready state
+    const handleDocumentReady = () => {
+      if (document.readyState === 'complete' && loadingState.isNavigating) {
+        // Small delay to ensure all components are mounted
+        setTimeout(() => {
+          loadingState.endNavigation();
+        }, 50);
+      }
+    };
+
+    if (loadingState.isNavigating) {
+      document.addEventListener('readystatechange', handleDocumentReady);
+      
+      // Also check current state
+      handleDocumentReady();
+    }
+
+    return () => {
+      document.removeEventListener('readystatechange', handleDocumentReady);
+    };
+  }, [loadingState.isNavigating, loadingState.endNavigation]);
+
   return (
     <LoadingContext.Provider value={loadingState}>
       {loadingState.showLoading && <LoadingScreen />}
-      <div className={loadingState.showLoading ? 'opacity-0 pointer-events-none' : 'opacity-100'}>
+      <div className={`transition-opacity duration-300 ${loadingState.showLoading ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
         {children}
       </div>
     </LoadingContext.Provider>

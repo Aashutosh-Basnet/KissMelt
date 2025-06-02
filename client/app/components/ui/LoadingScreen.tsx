@@ -10,7 +10,7 @@ const playfair = Playfair_Display({
 
 const LoadingScreen = () => {
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-gradient-to-br from-red-600 via-red-500 to-pink-400">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-gradient-to-br from-[rgb(255,0,0)] via-red-500 to-pink-400">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full animate-pulse"></div>
@@ -23,8 +23,8 @@ const LoadingScreen = () => {
       <div className="relative z-10 text-center px-8">
         {/* Animated Logo/Brand */}
         <div className="mb-8">
-          <h1 className={`text-6xl sm:text-2xl md:text-3xl lg:text-6xl font-black text-white mb-4 ${playfair.className} drop-shadow-2xl`}>
-            DIPPED
+          <h1 className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white mb-4 ${playfair.className} drop-shadow-2xl`}>
+            KISSMELT
           </h1>
           <div className="w-24 sm:w-32 md:w-40 h-1 bg-white mx-auto rounded-full animate-pulse"></div>
         </div>

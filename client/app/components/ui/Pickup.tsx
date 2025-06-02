@@ -16,7 +16,7 @@ const Pickup = () => {
 
   return (
     <>
-      <div className='bg-red-600  px-4 overflow-x-hidden'>
+      <div className='bg-[rgb(255,0,0)] px-4 overflow-x-hidden'>
           <div className='flex items-center gap-4'>
               <p className='text-red-200 text-sm md:text-sm font-extralight'>Pickup from 5646 Bay Street</p>
               <button 

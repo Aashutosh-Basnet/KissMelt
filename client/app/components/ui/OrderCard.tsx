@@ -27,7 +27,7 @@ const OrderCard = (props: OrderCardProps) => {
         <div className='flex flex-col text-md p-4'>
             <p className={` ${playfair.className} text-lg font-medium`}>{props.title}</p>
             {props.description && <p className={`${manrope.className}`}>{props.description}</p>}
-            {props.price ? <p>{props.price}</p> : <p className={`text-red-600 ${manrope.className}`}>Out of Stock</p>}
+            {props.price ? <p>{props.price}</p> : <p className={`text-[rgb(255,0,0)] ${manrope.className}`}>Out of Stock</p>}
         </div>
     </div>
   )

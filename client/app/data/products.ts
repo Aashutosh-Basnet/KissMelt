@@ -25,7 +25,7 @@ export const price = {
         }
     },
     RICE_KRISPIES_TREATS: {
-        bg: "bg-red-600",
+        bg: "bg-[rgb(255,0,0)]",
         items: {
         item1: {
             description: "One Dozen Colored Rice Krispies Treats",
@@ -75,7 +75,7 @@ export const price = {
         }    
     },
     APPLES: {
-        bg: "bg-red-600",
+        bg: "bg-[rgb(255,0,0)]",
         items: {
         item1: {
             description: "One Dozen Colored Rice Krispies Treats",

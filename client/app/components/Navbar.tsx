@@ -28,7 +28,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`bg-red-600 w-full overflow-x-hidden ${manrope.className}`}>
+    <nav className={`bg-[rgb(255,0,0)] w-full overflow-x-hidden ${manrope.className}`}>
       <div className="hidden lg:flex justify-end items-center px-3 py-3">
         <ul className="flex font-semibold gap-6 font-roboto text-white items-center m-5">
           {menuItems.slice(0, -1).map(({ label, href }, idx) => (
@@ -61,7 +61,7 @@ const Navbar = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="lg:hidden bg-red-600 w-full">
+        <div className="lg:hidden bg-[rgb(255,0,0)] w-full">
           <ul className="flex flex-col font-roboto text-white">
             {menuItems.map(({ label, href }, idx) => (
               <li key={idx} className="border-b border-red-500 last:border-none">

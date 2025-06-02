@@ -12,18 +12,13 @@ interface LoadingLinkProps {
 }
 
 const LoadingLink: React.FC<LoadingLinkProps> = ({ href, children, className, onClick, ...props }) => {
-  const { startNavigation, endNavigation } = useLoadingContext();
+  const { startNavigation } = useLoadingContext();
 
   const handleClick = () => {
     startNavigation();
     if (onClick) {
       onClick();
     }
-    
-    // Simulate navigation delay
-    setTimeout(() => {
-      endNavigation();
-    }, 1000);
   };
 
   return (

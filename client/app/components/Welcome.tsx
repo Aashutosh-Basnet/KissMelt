@@ -30,14 +30,14 @@ const Welcome = () => {
       <div className='w-full lg:w-1/2 flex flex-col justify-center px-6 py-8 lg:p-0'>
         <div className='max-w-[90%] lg:max-w-[80%] mx-auto lg:ml-0 lg:mr-10'>
           <h2 className={`text-4xl md:text-xl lg:text-4xl m-8 font-bold text-center lg:text-left ${playfair.className}`}>
-            WELCOME TO DIPPED
+            WELCOME TO KissMelt
           </h2>
           <div className='space-y-6'>
             <p className={`text-md  md:text-md font-light ${manrope.className}`}>
               Where confectionery craftsmanship and innovation meet. We specialize in handcrafted delights that blend tradition with creativity, ranging from caramel apples and chocolate-dipped strawberries to cheesecake bites and other decadent chocolate-dipped treats.
             </p>
             <p className={`text-md  md:text-md font-light ${manrope.className}`}>
-              At Dipped, we take pride in every detail. Each creation is meticulously handcrafted in small batches. What began in a humble home kitchen has flourished into a dedication to quality and a passion for chocolate dipping. Come see the artistry that defines Dipped!
+              At KissMelt, we take pride in every detail. Each creation is meticulously handcrafted in small batches. What began in a humble home kitchen has flourished into a dedication to quality and a passion for chocolate dipping. Come see the artistry that defines Dipped!
             </p>
           </div>
           <div className='mt-8 flex justify-center lg:justify-start'>

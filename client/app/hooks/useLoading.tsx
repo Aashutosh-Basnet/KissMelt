@@ -1,10 +1,12 @@
 "use client"
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 const useLoading = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isNavigating, setIsNavigating] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     // Handle initial page load
@@ -15,15 +17,27 @@ const useLoading = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    // Handle route changes - this will trigger when pathname changes
+    if (isNavigating) {
+      // Wait for the page to be fully rendered
+      const loadTimer = setTimeout(() => {
+        setIsNavigating(false);
+      }, 100); // Short delay to ensure rendering is complete
+
+      return () => clearTimeout(loadTimer);
+    }
+  }, [pathname, isNavigating]);
+
   // Function to manually trigger navigation loading
   const startNavigation = () => {
     setIsNavigating(true);
   };
 
   const endNavigation = () => {
-    setTimeout(() => {
-      setIsNavigating(false);
-    }, 500);
+    // This will be called by the pathname change effect
+    // or can be called manually if needed
+    setIsNavigating(false);
   };
 
   // Combined loading state
