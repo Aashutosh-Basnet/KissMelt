@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dipped - Premium Chocolate Treats",
+  title: "KissMelt - Premium Chocolate Treats",
   description: "Delicious chocolate-covered strawberries, apples, and custom treats",
 };
 

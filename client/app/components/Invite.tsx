@@ -14,7 +14,7 @@ const Invite = () => {
     <div className="bg-red-600 py-8 md:py-12 lg:py-16">
       <div className="w-[90%] md:w-[80%] lg:w-[55vw] mx-auto px-4 text-center text-white">
         <h3 className={`text-lg md:text-xl lg:text-3xl font-extrabold mb-4 ${playfair.className}`}>
-          JOIN THE DIPPED CLUB
+          JOIN THE  CLUB
         </h3>
         <p className={`text-md md:text-lg mb-6 lg:mb-8 ${manrope.className}`}>
           To find out about our latest treats and special offers!
