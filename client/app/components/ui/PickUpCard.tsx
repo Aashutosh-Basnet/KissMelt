@@ -78,29 +78,29 @@ const PickUpCard: React.FC<PickUpCardProps> = ({ isOpen, onClose }) => {
         <div className="bg-white px-4 sm:px-8 lg:px-12 py-3 sm:py-4 rounded-t-xl">
           <div className="flex items-center justify-between bg-gray-100 p-2 px-3 sm:px-4 rounded-full">
             <div className="flex items-center gap-2">
-            <div className="m-1 sm:m-2 lg:m-3 flex gap-2 sm:gap-3">
-              <MdLocationOn size={20} className="text-gray-500 sm:w-6 sm:h-6 lg:w-8 lg:h-8" />
-              <span className="text-sm sm:text-lg lg:text-2xl font-medium text-gray-500 truncate">Pickup at 5646 Bay Street</span>
+            <div className="m-1 sm:m-2 flex gap-2 sm:gap-3">
+              <MdLocationOn size={16} className="text-gray-500" />
+              <span className="text-sm sm:text-md font-medium text-gray-500 truncate">Pickup at 5646 Bay Street</span>
             </div>
             </div>
-            <MdEdit size={16} className="text-red-500 cursor-pointer sm:w-5 sm:h-5" />
+            <MdEdit size={16} className="text-red-500" />
           </div>
         </div>
 
         {/* Content */}
         <div className="p-4 sm:p-6 lg:px-16">
-          <h2 className={`text-3xl sm:text-5xl lg:text-7xl font-extrabold mb-4 sm:mb-6 text-black ${playfair.className}`}>Schedule order</h2>
+          <h2 className={`text-lg sm:text-xl lg:text-3xl font-extrabold mb-4 sm:mb-4 text-black ${playfair.className}`}>Schedule order</h2>
           
           {/* No minimum */}
-          <div className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8 border-b border-gray-400 w-full pb-6 sm:pb-10">
-            <IoCheckmarkCircle className="text-green-500 text-lg sm:text-xl flex-shrink-0" />
-            <span className={`text-black font-extralight text-lg sm:text-2xl lg:text-3xl ${manrope.className}`}>No minimum</span>
+          <div className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8 border-b border-gray-400 w-full pb-6">
+            <IoCheckmarkCircle className="text-green-500 text-lg sm:text-lg flex-shrink-0" />
+            <span className={`text-black font-extralight text-md sm:text-md ${manrope.className}`}>No minimum</span>
           </div>
 
           {/* Select pickup time */}
           <div className="mb-6">
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-light mb-2 text-black">Select pickup time</h3>
-            <p className={`text-black mb-4 sm:mb-6 text-base sm:text-xl lg:text-2xl font-extralight ${manrope.className}`}>Choose from the available timeslots for your order</p>
+            <h3 className="text-sm sm:text-lg font-light mb-2 text-black">Select pickup time</h3>
+            <p className={`text-black mb-4 sm:mb-6 text-base sm:text-sm font-extralight ${manrope.className}`}>Choose from the available timeslots for your order</p>
             
             {/* Date selector */}
             <div className="relative mb-6 sm:mb-8">
@@ -109,14 +109,14 @@ const PickUpCard: React.FC<PickUpCardProps> = ({ isOpen, onClose }) => {
                   <button
                     key={date.label}
                     onClick={() => setSelectedDate(date.label)}
-                    className={`flex-shrink-0 px-3 sm:px-4 lg:px-8 py-3 sm:py-4 lg:py-8 rounded-xl sm:rounded-2xl text-center min-w-[60px] sm:min-w-[70px] ${manrope.className} font-medium ${
+                    className={`flex-shrink-0 px-3 sm:px-4 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-center min-w-[60px] sm:min-w-[70px] ${manrope.className} font-medium ${
                       selectedDate === date.label
                         ? 'bg-red-500 text-white'
                         : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
                     }`}
                   >
-                    <div className="text-sm sm:text-xl lg:text-3xl font-semibold">{date.label}</div>
-                    <div className="text-xs sm:text-lg lg:text-3xl">{date.sublabel}</div>
+                    <div className="text-sm sm:text-sm font-semibold">{date.label}</div>
+                    <div className="text-xs sm:text-sm">{date.sublabel}</div>
                   </button>
                 ))}
               </div>
@@ -128,7 +128,7 @@ const PickUpCard: React.FC<PickUpCardProps> = ({ isOpen, onClose }) => {
               {times.map((time, index) => (
                 <label
                   key={`${time}-${index}`}
-                  className="flex items-center gap-3 sm:gap-4 cursor-pointer py-3 sm:py-6 border-b border-gray-300"
+                  className="flex items-center gap-3 sm:gap-4 cursor-pointer py-3 sm:py-2 border-b border-gray-300"
                 >
                   <div className="relative flex-shrink-0">
                     <input
@@ -145,7 +145,7 @@ const PickUpCard: React.FC<PickUpCardProps> = ({ isOpen, onClose }) => {
                       </div>
                     )}
                   </div>
-                  <span className={`text-lg sm:text-2xl lg:text-3xl text-black ${manrope.className} font-extralight`}>{time}</span>
+                  <span className={`sm:text-sm text-black ${manrope.className} font-extralight`}>{time}</span>
                 </label>
               ))}
             </div>
@@ -153,12 +153,12 @@ const PickUpCard: React.FC<PickUpCardProps> = ({ isOpen, onClose }) => {
         </div>
 
         {/* Footer */}
-        <div className="p-4 sm:p-6">
+        <div className="p-4 sm:p-6 flex items-center gap-6">
+          <IoMdClose size={18} className="sm:w-5 sm:h-5 text-red-600" />
           <button
             onClick={onClose}
-            className="w-full bg-red-600 text-white py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-red-700 transition-colors flex items-center justify-center gap-2 sm:gap-3"
+            className="w-full bg-red-600 text-white py-3 sm:py-4 rounded-full text-base sm:text-sm font-semibold hover:bg-red-700 transition-colors flex items-center justify-center gap-2 sm:gap-3"
           >
-            <IoMdClose size={18} className="sm:w-5 sm:h-5" />
             <span className="truncate">Change Later ({selectedTime})</span>
           </button>
         </div>

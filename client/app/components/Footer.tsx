@@ -12,9 +12,9 @@ const Footer = () => {
   return (
     <footer className={`bg-red-600 text-white ${manrope.className} overflow-x-hidden p-5`}>
       <div className="mx-auto">
-        <div className="flex flex-wrap md:flex-row justify-between py-8 md:py-14">
+        <div className="flex flex-wrap md:flex-row justify-between py-8 md:py-8">
           <div className="w-full md:w-auto mb-8 md:mb-0">
-            <ul className="flex flex-wrap md:flex-row text-base md:text-lg lg:text-2xl font-bold gap-4 md:gap-8 lg:gap-12">
+            <ul className="flex flex-wrap md:flex-row text-xs font-bold gap-4 md:gap-6 py-2">
               {menuItems.map((item, idx) => (
                 <li key={idx} className="hover:text-pink-300 transition-colors">
                   <Link href="/">{item}</Link>
@@ -28,8 +28,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-red-500 py-6 md:py-8">
-          <p className="text-center text-base md:text-lg lg:text-2xl">
+        <div className="border-t border-red-500 py-6 md:py-6">
+          <p className={` ${manrope.className} text-center text-base lg:text-md`}>
             © 2024 Dipped, LLC
           </p>
         </div>

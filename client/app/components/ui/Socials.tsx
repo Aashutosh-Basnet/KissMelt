@@ -6,11 +6,11 @@ import { FaTiktok } from "react-icons/fa";
 
 const Socials = () => {
   return (
-    <div className='flex gap-4 mx-5'>
-        <IoMail size={30}/>
-        <FaFacebookF size={30}/>
-        <RiInstagramFill size={30}/>
-        <FaTiktok size={30}/>
+    <div className='flex items-center gap-4 mx-5'>
+        <IoMail size={16}/>
+        <FaFacebookF size={16}/>
+        <RiInstagramFill size={16}/>
+        <FaTiktok size={16}/>
     </div>
   )
 }

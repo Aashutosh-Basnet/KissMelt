@@ -23,7 +23,7 @@ const LoadingScreen = () => {
       <div className="relative z-10 text-center px-8">
         {/* Animated Logo/Brand */}
         <div className="mb-8">
-          <h1 className={`text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white mb-4 ${playfair.className} drop-shadow-2xl`}>
+          <h1 className={`text-6xl sm:text-2xl md:text-3xl lg:text-6xl font-black text-white mb-4 ${playfair.className} drop-shadow-2xl`}>
             DIPPED
           </h1>
           <div className="w-24 sm:w-32 md:w-40 h-1 bg-white mx-auto rounded-full animate-pulse"></div>

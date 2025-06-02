@@ -6,6 +6,13 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
 import LoadingLink from "./ui/LoadingLink";
 
+import { Manrope } from "next/font/google";
+
+const manrope = Manrope({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+});
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -21,22 +28,22 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-red-600 w-full overflow-x-hidden">
-      <div className="hidden lg:flex justify-end items-center px-8 py-5">
-        <ul className="flex font-bold gap-12 font-roboto text-white items-center m-5">
+    <nav className={`bg-red-600 w-full overflow-x-hidden ${manrope.className}`}>
+      <div className="hidden lg:flex justify-end items-center px-3 py-3">
+        <ul className="flex font-semibold gap-6 font-roboto text-white items-center m-5">
           {menuItems.slice(0, -1).map(({ label, href }, idx) => (
             <li key={idx} className="relative group">
-              <LoadingLink href={href} className="text-2xl whitespace-nowrap block pb-2">
+              <LoadingLink href={href} className="text-sm whitespace-nowrap block pb-2">
                 {label}
                 <span className="absolute bottom-0 left-0 w-0 h-[3px] bg-white transition-all duration-300 group-hover:w-full"></span>
               </LoadingLink>
             </li>
           ))}
         </ul>
-        <div className="flex gap-6 text-white mx-6">
-          <IoIosSearch className="cursor-pointer" size={35} />
-          <GoPerson className="cursor-pointer" size={35} />
-          <IoIosCart className="cursor-pointer" size={35} />
+        <div className="flex items-center gap-6 text-white mx-6">
+          <IoIosSearch className="cursor-pointer" size={18} />
+          <GoPerson className="cursor-pointer" size={18} />
+          <IoIosCart className="cursor-pointer" size={18} />
         </div>
       </div>
 
